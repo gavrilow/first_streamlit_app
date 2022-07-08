@@ -1,7 +1,7 @@
 #snowflake application for 2nd bage
 import streamlit
 import pandas
-#import requests
+import requests
 import snowflake.connector
 from urllib.error import URLError
 
