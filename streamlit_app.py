@@ -34,6 +34,10 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # output normalized json in table
 streamlit.dataframe(fruityvice_normalized)
 
+add_my_fruit = streamlit.text_input('Add my fruit?','Jackfruit')
+streamlit.write('The user entered ', add_my_fruit)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + add_my_fruit)
+
 import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
